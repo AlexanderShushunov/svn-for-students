@@ -1,0 +1,7 @@
+docker pull ashushunov/svn-for-testers
+docker rm -f svn-for-students
+docker run \
+  --name svn-for-students \
+  -p 3690:3690 \
+  --detach \
+  ashushunov/svn-for-testers
