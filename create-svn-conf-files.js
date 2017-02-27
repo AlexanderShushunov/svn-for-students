@@ -1,7 +1,7 @@
 fs = require('fs');
 fs.readFile('./student-list', 'utf8', function (err, data) {
     if (err) {
-        return console.log("Can not read file 'student-list'. It should contain student names in 'Surname_Name' format.");
+        return console.log("Can not read file 'student-list'. It should contain student names in 'Name_Surname' format.");
     }
     let students = data.split("\n").filter(student =>  student.length > 0);
     createPasswd(students);
