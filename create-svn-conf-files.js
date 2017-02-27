@@ -5,7 +5,7 @@ fs.readFile('./student-list', 'utf8', function (err, data) {
     }
     let students = data.split("\n").filter(student =>  student.length > 0);
     createPasswd(students);
-    createAuthz(students)
+    createAuthz(students);
 });
 
 function createPasswd(students) {
@@ -23,6 +23,7 @@ function createAuthz(students) {
             }
         }).map((pair) => `[/${pair.student}]\n${pair.student} = rw\n${pair.partner} = rw`)
         .concat("[/]\nadmin = rw")
+        .concat("[/task]\n* = r")
         .join("\n\n"));
 }
 

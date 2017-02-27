@@ -7,6 +7,7 @@ RUN mkdir -p /var/svn/ && svnadmin create /var/svn/repo
 COPY ./svn-conf/* /var/svn/repo/conf/
 COPY ./make-student-folders.sh /var/svn/
 COPY ./student-list /var/svn/
+COPY ./task.txt /var/svn/
 RUN /var/svn/make-student-folders.sh
 
 EXPOSE 3690
