@@ -18,4 +18,4 @@ cp /var/svn/student-list ./task/student-list.txt
 cp /var/svn/task.txt ./task/task.txt
 svn add task
 
-svn commit -m "Add folder with task"./ru
+svn commit -m "Add folder with task"
